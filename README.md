@@ -3,8 +3,8 @@
 **Objective** is to outline the architecture as diagram, develop heuritstics, refine the decision prompt and test the code with several examples.
 
 ## High Level Plan
-- [ ] Setup the code base from existing architecture from class, python packages, run few examples
-- [ ] 
+- [X] Setup the code base from existing architecture from class, python packages, run few examples
+- [ ] Add pdb inspect steps to work through the steps to understand the execution flow
 - [ ] Post a video in youtube, link :  
 
 
