@@ -3,7 +3,9 @@
 **Objective** is to outline the architecture as diagram, develop heuritstics, refine the decision prompt and test the code with several examples.
 
 ## High Level Plan
-
+- [ ] Setup the code base from existing architecture from class, python packages, run few examples
+- [ ] 
+- [ ] Post a video in youtube, link :  
 
 
 
