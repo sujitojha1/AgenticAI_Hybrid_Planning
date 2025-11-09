@@ -1,3 +1,13 @@
+# Agentic AI with Hybrid Planning
+
+**Objective** is to outline the architecture as diagram, develop heuritstics, refine the decision prompt and test the code with several examples.
+
+## High Level Plan
+
+
+
+
+## Rough Notes
 Start with the code shared. Your task is
 
 Explain the Architecture in full detail, including a Chart/Graph (hand-drawn or using an app)
@@ -16,3 +26,5 @@ New Decision prompt, direct Github link
 Total Word count in your Decision Prompt
 A YouTube Video showing:
 Using the prompt above, and then 3 runs for the 3 new queries
+
+## References
