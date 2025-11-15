@@ -75,10 +75,6 @@ async def run_python_sandbox(code: str, dispatcher: Any) -> str:
             return f"{result}"
 
 
-
-
-
-
     except Exception as e:
         log("sandbox", f"⚠️ Execution error: {e}")
         return f"[sandbox error: {str(e)}]"

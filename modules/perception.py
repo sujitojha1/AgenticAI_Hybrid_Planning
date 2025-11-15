@@ -5,21 +5,18 @@ from pydantic import BaseModel
 from modules.model_manager import ModelManager
 from modules.tools import load_prompt, extract_json_block
 from core.context import AgentContext
+from pdb import set_trace
+from rich.console import Console
 
 import json
 
+console = Console()
 
-# Optional logging fallback
-try:
-    from agent import log
-except ImportError:
-    import datetime
-    def log(stage: str, msg: str):
-        now = datetime.datetime.now().strftime("%H:%M:%S")
-        print(f"[{now}] [{stage}] {msg}")
+def log(stage: str, msg: str):
+    """Perception specific logger using rich for cleaner console output."""
+    console.log(f"[bold cyan]{stage}[/]: {msg}")
 
 model = ModelManager()
-
 
 prompt_path = "prompts/perception_prompt.txt"
 
@@ -54,7 +51,7 @@ async def extract_perception(user_input: str, mcp_server_descriptions: dict) -> 
     try:
         raw = await model.generate_text(prompt)
         raw = raw.strip()
-        log("perception", f"Raw output: {raw}")
+        #log("perception", f"Raw output: {raw}")
 
         # Try parsing into PerceptionResult
         json_block = extract_json_block(raw)
@@ -63,7 +60,8 @@ async def extract_perception(user_input: str, mcp_server_descriptions: dict) -> 
         # If selected_servers missing, fallback
         if "selected_servers" not in result:
             result["selected_servers"] = list(mcp_server_descriptions.keys())
-        print("result", result)
+        log("perception", f"{result}")
+        set_trace()
 
         return PerceptionResult(**result)
 

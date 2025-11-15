@@ -43,7 +43,8 @@ async def generate_plan(
 
     try:
         raw = (await model.generate_text(prompt)).strip()
-        log("plan", f"LLM output: {raw}")
+        #log("plan", f"LLM output: {raw}")
+        print("Plan")
 
         # If fenced in ```python ... ```, extract
         if raw.startswith("```"):

@@ -30,7 +30,8 @@ async def main():
 
     try:
         while True:
-            user_input = input("🧑 What do you want to solve today? → ")
+            #user_input = input("🧑 What do you want to solve today? → ")
+            user_input = "How much Anmol singh paid for his DLF apartment via Capbridge?"
             if user_input.lower() == 'exit':
                 break
             if user_input.lower() == 'new':

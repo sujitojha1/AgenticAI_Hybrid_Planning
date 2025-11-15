@@ -40,7 +40,7 @@ class AgentLoop:
                 user_input_override = getattr(self.context, "user_input_override", None)
                 perception = await run_perception(context=self.context, user_input=user_input_override or self.context.user_input)
 
-                print(f"[perception] {perception}")
+                #print(f"[perception] {perception}")
 
                 selected_servers = perception.selected_servers
                 selected_tools = self.mcp.get_tools_from_servers(selected_servers)
@@ -64,7 +64,7 @@ class AgentLoop:
                     step_num=step + 1,
                     max_steps=max_steps,
                 )
-                print(f"[plan] {plan}")
+                #print(f"[plan] {plan}")
 
                 # === Execution ===
                 if re.search(r"^\s*(async\s+)?def\s+solve\s*\(", plan, re.MULTILINE):
@@ -98,7 +98,7 @@ class AgentLoop:
                                 f"FINAL_ANSWER: your answer\n\n"
                                 f"Otherwise, return the next FUNCTION_CALL."
                             )
-                            log("loop", f"📨 Forwarding intermediate result to next step:\n{self.context.user_input_override}\n\n")
+                            #log("loop", f"📨 Forwarding intermediate result to next step:\n{self.context.user_input_override}\n\n")
                             log("loop", f"🔁 Continuing based on FURTHER_PROCESSING_REQUIRED — Step {step+1} continues...")
                             break  # Step will continue
                         elif result.startswith("[sandbox error:"):
