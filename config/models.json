@@ -1,6 +1,6 @@
 {
   "defaults": {
-    "text_generation": "gemini-lite",
+    "text_generation": "gemini",
     "embedding": "nomic"
   },
   "models": {
