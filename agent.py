@@ -9,6 +9,7 @@ import datetime
 from pathlib import Path
 import json
 import re
+from pdb import set_trace
 
 def log(stage: str, msg: str):
     """Simple timestamped console logger."""
@@ -46,7 +47,7 @@ async def main():
                 agent = AgentLoop(context)
                 if not current_session:
                     current_session = context.session_id
-
+                set_trace()
                 result = await agent.run()
 
                 if isinstance(result, dict):

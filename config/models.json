@@ -1,12 +1,18 @@
 {
   "defaults": {
-    "text_generation": "gemini",
+    "text_generation": "gemini-lite",
     "embedding": "nomic"
   },
   "models": {
     "gemini": {
       "type": "gemini",
       "model": "gemini-2.0-flash",
+      "embedding_model": "models/embedding-001",
+      "api_key_env": "GEMINI_API_KEY"
+    },
+    "gemini-lite": {
+      "type": "gemini",
+      "model": "gemini-2.0-flash-lite",
       "embedding_model": "models/embedding-001",
       "api_key_env": "GEMINI_API_KEY"
     },

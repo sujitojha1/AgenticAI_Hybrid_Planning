@@ -10,6 +10,7 @@ from core.strategy import select_decision_prompt_path
 from core.context import AgentContext
 from modules.tools import summarize_tools
 import re
+from pdb import set_trace
 
 try:
     from agent import log
@@ -34,6 +35,7 @@ class AgentLoop:
             lifelines_left = self.context.agent_profile.strategy.max_lifelines_per_step
 
             while lifelines_left >= 0:
+                set_trace()
                 # === Perception ===
                 user_input_override = getattr(self.context, "user_input_override", None)
                 perception = await run_perception(context=self.context, user_input=user_input_override or self.context.user_input)
