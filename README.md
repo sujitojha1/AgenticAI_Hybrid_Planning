@@ -5,6 +5,7 @@
 ## High Level Plan
 - [X] Setup the code base from existing architecture from class, python packages, run few examples
 - [ ] Add pdb inspect steps to work through the steps to understand the execution flow
+- [ ] Understand the folder structure and go over course materials
 - [ ] Post a video in youtube, link :  
 
 
